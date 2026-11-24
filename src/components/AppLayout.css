@@ -1,0 +1,259 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e8f1;
+  box-shadow: 0 4px 16px rgba(24, 34, 56, 0.04);
+}
+
+.app-topbar__inner {
+  width: min(1220px, calc(100% - 40px));
+  min-height: 74px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.app-brand img:first-child {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.app-brand img:last-child {
+  height: 38px;
+  width: auto;
+}
+
+.app-topbar__menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.app-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #526078;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-nav__link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.app-nav__link:hover {
+  background: #f0f4fc;
+  color: #263c70;
+}
+
+.app-nav__link.active {
+  background: #edf3ff;
+  color: #3867bd;
+  box-shadow: inset 0 0 0 1px rgba(56, 103, 189, 0.22);
+}
+
+.app-user-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-user-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+}
+
+.app-user-badge strong {
+  font-size: 12px;
+  font-weight: 800;
+  color: #182238;
+}
+
+.app-user-badge span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #65728a;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.app-logout-btn {
+  height: 38px;
+  padding: 0 15px;
+  border: 1px solid #d9e1ef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #3867bd;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.app-logout-btn:hover {
+  background: #3867bd;
+  border-color: #3867bd;
+  color: #ffffff;
+}
+
+.app-menu-toggle {
+  display: none;
+  height: 38px;
+  padding: 0 13px;
+  border: 1px solid #d9e1ef;
+  border-radius: 8px;
+  background: #f7f9fd;
+  color: #263c70;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer {
+  background: #60749e;
+  margin-top: auto;
+}
+
+.app-footer__inner {
+  width: min(1220px, calc(100% - 40px));
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.app-footer__inner img {
+  width: 155px;
+  max-height: 68px;
+  object-fit: contain;
+}
+
+.app-footer__inner a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 880px) {
+  .app-topbar__inner {
+    flex-wrap: wrap;
+    padding: 10px 0;
+    min-height: 66px;
+  }
+
+  .app-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .app-topbar__menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 10px;
+    border-top: 1px solid #edf0f5;
+  }
+
+  .app-topbar__menu.is-open {
+    display: flex;
+  }
+
+  .app-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-nav__link {
+    width: 100%;
+  }
+
+  .app-user-area {
+    justify-content: space-between;
+    padding: 10px 4px 4px;
+    border-top: 1px solid #edf0f5;
+  }
+
+  .app-user-badge {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .app-topbar__inner,
+  .app-footer__inner {
+    width: calc(100% - 28px);
+  }
+
+  .app-brand img:first-child {
+    width: 34px;
+    height: 34px;
+  }
+
+  .app-brand img:last-child {
+    height: 32px;
+  }
+
+  .app-footer__inner {
+    gap: 16px;
+  }
+
+  .app-footer__inner img {
+    width: 120px;
+  }
+
+  .app-footer__inner a {
+    font-size: 12px;
+  }
+}
