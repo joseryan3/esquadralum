@@ -181,7 +181,7 @@ export default function Tabela() {
       <div className="table-main">
         <div className="table-heading">
           <div>
-            <p>Painel operacional (RF03 / RF04 / RF16)</p>
+            <p>Painel operacional </p>
             <h1>Pedidos &amp; Esquadrias</h1>
           </div>
           {podeGerenciar && (
