@@ -84,7 +84,7 @@ export default function Home() {
         {dashboard?.funilEtapas && (
           <section className="recent-orders" aria-label="Funil de etapas">
             <div className="section-heading">
-              <h2>Distribuição por Etapa Produtiva (RN03)</h2>
+              <h2>Distribuição por Etapa Produtiva</h2>
             </div>
             <div className="funnel-grid">
               {dashboard.funilEtapas.map((et) => (
