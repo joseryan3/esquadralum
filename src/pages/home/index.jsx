@@ -59,7 +59,7 @@ export default function Home() {
       <div className="home-main">
         <div className="home-heading">
           <div>
-            <p className="eyebrow">Visão geral (RF15)</p>
+            <p className="eyebrow">Visão geral</p>
             <h1>Painel de Monitoramento</h1>
             <p>Acompanhe o resumo da produção em tempo real</p>
           </div>
